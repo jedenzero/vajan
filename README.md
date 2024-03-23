@@ -1,0 +1,2 @@
+# vajan
+Vajanči ečenijeze.
