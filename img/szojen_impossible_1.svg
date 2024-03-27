@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 3000 3000" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer" vectornator:layerName="Layer">
+<path d="M0 0L3000 0L3000 3000L0 3000L0 0Z" fill="#282828" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M550 550L1025 550" fill="none" opacity="1" stroke="#ff3374" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M550 550L550 1025" fill="none" opacity="1" stroke="#ff3374" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M1975 2450L2450 2450" fill="none" opacity="1" stroke="#ffc233" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M2450 1975L2450 2450" fill="none" opacity="1" stroke="#ffc233" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M1975 1975L2450 2450" fill="none" opacity="1" stroke="#ffc233" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M1975 1975L1975 2450" fill="none" opacity="1" stroke="#a0a0a0" stroke-linecap="round" stroke-linejoin="miter" stroke-width="50"/>
+<path d="M1450 1500C1450 1472.39 1472.39 1450 1500 1450C1527.61 1450 1550 1472.39 1550 1500C1550 1527.61 1527.61 1550 1500 1550C1472.39 1550 1450 1527.61 1450 1500Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1925 1500C1925 1472.39 1947.39 1450 1975 1450C2002.61 1450 2025 1472.39 2025 1500C2025 1527.61 2002.61 1550 1975 1550C1947.39 1550 1925 1527.61 1925 1500Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M2400 1500C2400 1472.39 2422.39 1450 2450 1450C2477.61 1450 2500 1472.39 2500 1500C2500 1527.61 2477.61 1550 2450 1550C2422.39 1550 2400 1527.61 2400 1500Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M500 1500C500 1472.39 522.386 1450 550 1450C577.614 1450 600 1472.39 600 1500C600 1527.61 577.614 1550 550 1550C522.386 1550 500 1527.61 500 1500Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M975 1500C975 1472.39 997.386 1450 1025 1450C1052.61 1450 1075 1472.39 1075 1500C1075 1527.61 1052.61 1550 1025 1550C997.386 1550 975 1527.61 975 1500Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1450 1975C1450 1947.39 1472.39 1925 1500 1925C1527.61 1925 1550 1947.39 1550 1975C1550 2002.61 1527.61 2025 1500 2025C1472.39 2025 1450 2002.61 1450 1975Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1925 1975C1925 1947.39 1947.39 1925 1975 1925C2002.61 1925 2025 1947.39 2025 1975C2025 2002.61 2002.61 2025 1975 2025C1947.39 2025 1925 2002.61 1925 1975Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M2400 1975C2400 1947.39 2422.39 1925 2450 1925C2477.61 1925 2500 1947.39 2500 1975C2500 2002.61 2477.61 2025 2450 2025C2422.39 2025 2400 2002.61 2400 1975Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M500 1975C500 1947.39 522.386 1925 550 1925C577.614 1925 600 1947.39 600 1975C600 2002.61 577.614 2025 550 2025C522.386 2025 500 2002.61 500 1975Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M975 1975C975 1947.39 997.386 1925 1025 1925C1052.61 1925 1075 1947.39 1075 1975C1075 2002.61 1052.61 2025 1025 2025C997.386 2025 975 2002.61 975 1975Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1450 2450C1450 2422.39 1472.39 2400 1500 2400C1527.61 2400 1550 2422.39 1550 2450C1550 2477.61 1527.61 2500 1500 2500C1472.39 2500 1450 2477.61 1450 2450Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1925 2450C1925 2422.39 1947.39 2400 1975 2400C2002.61 2400 2025 2422.39 2025 2450C2025 2477.61 2002.61 2500 1975 2500C1947.39 2500 1925 2477.61 1925 2450Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M2400 2450C2400 2422.39 2422.39 2400 2450 2400C2477.61 2400 2500 2422.39 2500 2450C2500 2477.61 2477.61 2500 2450 2500C2422.39 2500 2400 2477.61 2400 2450Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M500 2450C500 2422.39 522.386 2400 550 2400C577.614 2400 600 2422.39 600 2450C600 2477.61 577.614 2500 550 2500C522.386 2500 500 2477.61 500 2450Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M975 2450C975 2422.39 997.386 2400 1025 2400C1052.61 2400 1075 2422.39 1075 2450C1075 2477.61 1052.61 2500 1025 2500C997.386 2500 975 2477.61 975 2450Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1450 550C1450 522.386 1472.39 500 1500 500C1527.61 500 1550 522.386 1550 550C1550 577.614 1527.61 600 1500 600C1472.39 600 1450 577.614 1450 550Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1925 550C1925 522.386 1947.39 500 1975 500C2002.61 500 2025 522.386 2025 550C2025 577.614 2002.61 600 1975 600C1947.39 600 1925 577.614 1925 550Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M2400 550C2400 522.386 2422.39 500 2450 500C2477.61 500 2500 522.386 2500 550C2500 577.614 2477.61 600 2450 600C2422.39 600 2400 577.614 2400 550Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M500 550C500 522.386 522.386 500 550 500C577.614 500 600 522.386 600 550C600 577.614 577.614 600 550 600C522.386 600 500 577.614 500 550Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M975 550C975 522.386 997.386 500 1025 500C1052.61 500 1075 522.386 1075 550C1075 577.614 1052.61 600 1025 600C997.386 600 975 577.614 975 550Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1450 1025C1450 997.386 1472.39 975 1500 975C1527.61 975 1550 997.386 1550 1025C1550 1052.61 1527.61 1075 1500 1075C1472.39 1075 1450 1052.61 1450 1025Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M1925 1025C1925 997.386 1947.39 975 1975 975C2002.61 975 2025 997.386 2025 1025C2025 1052.61 2002.61 1075 1975 1075C1947.39 1075 1925 1052.61 1925 1025Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M2400 1025C2400 997.386 2422.39 975 2450 975C2477.61 975 2500 997.386 2500 1025C2500 1052.61 2477.61 1075 2450 1075C2422.39 1075 2400 1052.61 2400 1025Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M500 1025C500 997.386 522.386 975 550 975C577.614 975 600 997.386 600 1025C600 1052.61 577.614 1075 550 1075C522.386 1075 500 1052.61 500 1025Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M975 1025C975 997.386 997.386 975 1025 975C1052.61 975 1075 997.386 1075 1025C1075 1052.61 1052.61 1075 1025 1075C997.386 1075 975 1052.61 975 1025Z" fill="#fafafa" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>
