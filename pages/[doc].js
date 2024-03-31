@@ -1,4 +1,4 @@
-import styles from '../style/grayblue.module.css';
+import styles from '../styles/grayblue.module.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import marked from 'marked';
