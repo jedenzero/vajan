@@ -18,7 +18,7 @@
 </tr>
 </table>
 #### 준비
-<img src=img/szojen_setting.svg>
+<img src=../img/szojen_setting.svg>
 
 쇼옌을 시작하기 전에 땅의 양 끝에 서로 방향이 같은 두 벽을 세운다. 이 벽을 기초로 문을 만들어 낸다.
 #### 진행
@@ -31,11 +31,11 @@
 
 아래는 쇼옌에서 불가능한 수들이다.
 
-<img src=img/szojen_impossible_1.svg>
+<img src=../img/szojen_impossible_1.svg>
 
 회색 벽이 닫힌 공간을 만들었다.
 
-<img src=img/szojen_impossible_2.svg>
+<img src=../img/szojen_impossible_2.svg>
 
 나름 문을 만들지 못하도록 시도했으나 아무 벽과도 인접하지 않았다.
 
