@@ -1,3 +1,4 @@
+import styles from '/grayblue.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -41,7 +42,7 @@ export default function Doc() {
       <div dangerouslySetInnerHTML={{ __html: content }} />
       {docs.length > 0 && docs.map((el, index) => (
         <p key={index}>
-          <a href={`?doc=${el.split('.txt')[0]}`}>{el.split('.txt')[0]}</a>
+          <a href={`../${el.split('.txt')[0]}`}>{el.split('.txt')[0]}</a>
         </p>
       ))}
     </div>
