@@ -1,6 +1,7 @@
 import styles from 'grayblue.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import marked from 'marked';
 
 export default function Doc() {
   const router = useRouter();
