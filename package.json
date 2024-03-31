@@ -1,0 +1,22 @@
+{
+  "name": "vajan",
+  "version": "1.0.0",
+  "description": "is it necessery?",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "nextjs",
+    "react"
+  ],
+  "author": "1010",
+  "license": "",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
