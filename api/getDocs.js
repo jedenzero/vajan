@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
   const options = {
     hostname: 'api.github.com',
     port: 443,
-    path: '/repos/jedenzero/vajan/contents/',
+    path: '/repos/jedenzero/vajan/contents/documents',
     method: 'GET',
     headers: {
       'Authorization': `token ${process.env.vajan_docs}`,
