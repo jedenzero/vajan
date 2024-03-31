@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
 @import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+body{
+     font-family:"Montserrat","Noto Sans","Noto Sans KR";
+     color:#374052;
+     font-weight:300,700;
+     font-size:12px;
+     background-color:#FAFAFA;
+     word-break:keep-all;
+     line-height:150%;
+     -ms-overflow-style:none;
+}
 .header{
      position:sticky;
      top:0;
