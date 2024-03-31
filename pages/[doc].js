@@ -1,4 +1,4 @@
-import styles from '/grayblue.css';
+import styles from 'grayblue.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
