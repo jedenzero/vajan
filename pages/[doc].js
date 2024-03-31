@@ -1,4 +1,3 @@
-import styles from '../styles/grayblue.module.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import marked from 'marked';
@@ -10,26 +9,42 @@ export default function Doc() {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
-    let docName = '대문.txt';
-    if (doc) {
-      docName = doc + '.txt';
-    }
+    let isActive = true;
+    const docName = doc ? `${doc}.txt` : '대문.txt';
 
-    fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setContent(marked.parse(data.content));
-      })
-      .catch((error) => console.error('Error:', error));
+    const fetchContent = async () => {
+      try {
+        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
+        const data = await response.json();
+        if (isActive) {
+          setContent(marked.parse(data.content));
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchContent();
 
     if (!doc || doc === '대문') {
-      fetch('https://vajan.vercel.app/api/getDocs')
-        .then((response) => response.json())
-        .then((data) => {
-          setDocs(data.fileNames);
-        })
-        .catch((error) => console.error('Error:', error));
+      const fetchDocs = async () => {
+        try {
+          const response = await fetch('https://vajan.vercel.app/api/getDocs');
+          const data = await response.json();
+          if (isActive) {
+            setDocs(data.fileNames);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+
+      fetchDocs();
     }
+
+    return () => {
+      isActive = false;
+    };
   }, [doc]);
 
   return (
