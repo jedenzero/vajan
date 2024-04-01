@@ -23,20 +23,6 @@ body{
      backdrop-filter:blur(4px);
      -webkit-backdrop-filter: blur(4px);
 }
-.contain{
-     width:280px;
-     padding-left:20px;
-     padding-right:20px;
-     margin:0 auto;
-     font-family:"Montserrat","Noto Sans","Noto Sans KR";
-     color:#374052;
-     font-weight:300,700;
-     font-size:12px;
-     background-color:#FAFAFA;
-     word-break:keep-all;
-     line-height:150%;
-     -ms-overflow-style:none;
-}
 .badge{
      display:inline-block;
      height:20px;
@@ -82,6 +68,20 @@ body{
      border-radius:10px;
      background-color:#F5F5F5;
      color:#374052;
+}
+#contain{
+     width:280px;
+     padding-left:20px;
+     padding-right:20px;
+     margin:0 auto;
+     font-family:"Montserrat","Noto Sans","Noto Sans KR";
+     color:#374052;
+     font-weight:300,700;
+     font-size:12px;
+     background-color:#FAFAFA;
+     word-break:keep-all;
+     line-height:150%;
+     -ms-overflow-style:none;
 }
 #floating{
      position:fixed;
