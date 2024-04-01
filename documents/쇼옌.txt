@@ -17,8 +17,8 @@
 <td>이으면 닫힌 공간을 만드는 부분</td><td>문<small>(네어트어:šojen)</small></td>
 </tr>
 </table>
-#### 준비
 
+#### 준비
 <img src="https://jedenzero.github.io/vajan/img/szojen_setting.svg">
 
 쇼옌을 시작하기 전에 땅의 양 끝에 서로 방향이 같은 두 벽을 세운다. 이 벽을 기초로 문을 만들어 낸다.
