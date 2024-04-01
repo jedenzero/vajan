@@ -48,12 +48,15 @@ export default function Doc() {
   }, [doc]);
 
   return (
+    <div id="header">
+      <h2><a href="https://vajan.vercel.app/대문" style="color:#374052;margin-left:20px;">VAJAN</a></h2>
+    </div>
     <div id="contain">
       <h2>{doc || '대문'}</h2>
       <div dangerouslySetInnerHTML={{ __html: content }} />
       {(!doc || doc === '대문') && docs.length > 0 && docs.map((el, index) => (
         <p key={index}>
-          <a href={`/${el.split('.txt')[0]}`}>{el.split('.txt')[0]}</a>
+          <a href={`/${el.split('.txt')[0]}`} style="color:#374052;">{el.split('.txt')[0]}</a>
         </p>
       ))}
     </div>
