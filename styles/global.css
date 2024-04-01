@@ -25,7 +25,8 @@ body{
 }
 .contain{
      width:280px;
-     padding:0;
+     padding-left:10px;
+     padding-right:10px;
      margin:0 auto;
      font-family:"Montserrat","Noto Sans","Noto Sans KR";
      color:#374052;
