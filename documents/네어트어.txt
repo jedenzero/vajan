@@ -5,7 +5,7 @@
 	</tr>
 	<tr>
     <td>문자</td>
-    <td>[네어트 문자](네어트 문자)</td>
+    <td><a href="네어트 문자">네어트 문자</a></td>
   </tr>
   <tr>
     <td>어순</td>
@@ -31,16 +31,35 @@
 </table>
 
 > Yvečižal!
-> *-일반적인 네어트어 인사*
+*-일반적인 네어트어 인사*
 
 ### 개요
 **네어트어**는 [네어트](네어트)의 [네어트인](네어트인)과 [북네어트](북네어트)의 지배를 받았던 일부 [뫼우브인](뫼우브인), [안듸르인](안듸르인)이 사용했던 SOV 교착어이다. 네어트어족의 조어이기도 하다.
 ### 명칭
-한자로 <ruby>내특어<rt>奈貣語</rt></ruby> 혹은 <ruby>내덕어<rt>奈德語</rt></ruby>라고 한다. 짧게 <ruby>내어<rt>奈語</rt></ruby>라고 하기도 한다.
+한자로 <ruby>내탁어<rt>奈卓語</rt></ruby> 혹은 <ruby>내덕어<rt>奈德語</rt></ruby>라고 한다. 짧게 <ruby>내어<rt>奈語</rt></ruby>라고 하기도 한다.
 ### 역사
 ### 정서법
 ### 음운론
 ### 문법
+<table><tr><td>
+<span style="color:#5064C8;">&gt;</span> 자세한 내용은 <a href="네어트어/문법">네어트어/문법</a>을 참고하십시오.
+</td></tr></table>
+
+#### 어순
+네어트어는 간략하게는 SOV, 정확히는 LSOVA의 어순을 가지고 있다. 각 문장 성분의 의미는 다음과 같다.
+<table>
+<tr>
+<td>L</td><td>S</td><td>O</td><td>V</td><td>A</td>
+</tr>
+<tr>
+<td>장소어</td><td>주어</td><td>목적어</td><td>서술어</td><td>추가어</td>
+</tr>
+</table>
+
+> <span style="color:#FF5000;">Mjunăk</span> <span style="color:#FFB400;">anilenal</span> <span style="color:#00B450;">joncin</span> <span style="color:#0050FF;">vajanez</span>.
+<span style="color:#00B450;">빼앗긴</span> <span style="color:#0050FF;">들에도</span> <span style="color:#FF5000;">봄은</span> <span style="color:#FFB400;">오는가</span>.
+
+위의 예문은 LVA 구조이다.
 ### 방언
 ### 예문
 ### 관련 문서
