@@ -54,17 +54,19 @@
 <td>장소어</td><td>주어</td><td>목적어</td><td>서술어</td><td>추가어</td>
 </tr>
 </table>
+
 추가어는 앞의 문장과의 관계를 나타낸다. 한국어의 '-도'나 대조 화제에 쓰이는 '-는'에 해당한다.
-> <span style="color:#EF476F;">Mjunăk</span> <span style="color:#118AB2;">anilenal</span> <span style="color:#505050;">joncin</span> <span style="color:#073B4C;">vajanez</span>.
+> <span style="color:#EF476F;">Mjunăk</span> <span style="color:#118AB2;">anilenal</span> <span style="color:#505050;">joncin</span> <span style="color:#073B4C;">vajanez</span>.<br>
 <span style="color:#505050;">빼앗긴</span> <span style="color:#073B4C;">들에도</span> <span style="color:#EF476F;">봄은</span> <span style="color:#118AB2;">오는가</span>.
 
 LVA 구조인 문장의 예. 직역하면 '남의 들도 봄이 되는가.'이다.
-> <span style="color:#EF476F;">Šfileč</span> <span style="color:#FFD166;">as</span> <span style="color:#118AB2;">once</span> <span style="color:#073B4C;">uz</span>.
+> <span style="color:#EF476F;">Šfileč</span> <span style="color:#FFD166;">as</span> <span style="color:#118AB2;">once</span> <span style="color:#073B4C;">uz</span>.<br>
 <span style="color:#FFD166;">나는</span> <span style="color:#EF476F;">별을</span> <span style="color:#118AB2;">보고</span> <span style="color:#073B4C;">별도 그렇다</span>.
 
 LSVA 구조인 문장의 예. 이처럼 방향성을 띄는 동사의 목적은 목적어가 아닌 장소어로 분류된다.
 #### 의문문
 의문문은 두 가지로 나뉜다. 완전 의문문과 불완전 의문문이 그것이다.
+
 **완전 의문문**은 여부를 묻는 의문문으로, 의문 접사가 없더라도 완전한 문장을 이룬다.
 > Eseze**nal**?
 너야?
