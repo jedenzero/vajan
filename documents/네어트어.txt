@@ -47,19 +47,19 @@
 
 #### 어순
 네어트어는 간략하게는 SOV, 정확히는 LSOVA의 어순을 가지고 있다. 각 문장 성분의 의미는 다음과 같다.
-<table>
+<table style="text-align:center;">
 <tr>
-<td>L</td><td>S</td><td>O</td><td>V</td><td>A</td>
+<td style="color:#EF476F;">L</td><td style="color:#FFD166;">S</td><td style="color:#06D6A0;">O</td><td style="color:#118AB2;">V</td><td style="color:#073B4C;">A</td>
 </tr>
 <tr>
 <td>장소어</td><td>주어</td><td>목적어</td><td>서술어</td><td>추가어</td>
 </tr>
 </table>
 
-> <span style="color:#FF5000;">Mjunăk</span> <span style="color:#FFB400;">anilenal</span> <span style="color:#00B450;">joncin</span> <span style="color:#0050FF;">vajanez</span>.
-<span style="color:#00B450;">빼앗긴</span> <span style="color:#0050FF;">들에도</span> <span style="color:#FF5000;">봄은</span> <span style="color:#FFB400;">오는가</span>.
+> <span style="color:#EF476F;">Mjunăk</span> <span style="color:#118AB2;">anilenal</span> joncin <span style="color:#073B4C;">vajanez</span>.
+빼앗긴 <span style="color:#073B4C;">들에도</span> <span style="color:#EF476F;">봄은</span> <span style="color:#118AB2;">오는가</span>.
 
-위의 예문은 LVA 구조이다.
+LVA 구조인 문장의 예. 직역하면 '남의 들도 봄이 되는가.'이다.
 ### 방언
 ### 예문
 ### 관련 문서
