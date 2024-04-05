@@ -30,19 +30,49 @@
   <tr>
     <td>세부 코드</td>
     <td>ne-γo <a href="초기 네어트어">초기 네어트어</a><br>
-		ne-ze <a href="민중 네어트어">민중 네어트어</a></td>
+		ne-ze <a href="#">민중 네어트어</a></td>
   </tr>
 </table>
 
 > Yvečižal!<br>*-일반적인 네어트어 인사*
 
 ### 개요
-**네어트어**는 [네어트](네어트)의 [네어트인](네어트인)과 [북네어트](북네어트)의 지배를 받았던 일부 [뫼우브인](뫼우브인), [안듸르인](안듸르인)이 사용했던 SOV 교착어이다. 네어트어족의 조어이기도 하다.
+**네어트어**는 [네어트](네어트)의 [네어트인](네어트인)과 [북네어트](북네어트)의 지배를 받았던 일부 [뫼우브인](뫼우브인), [안듸르인](안듸르인)이 사용했던 SOV 교착어이다. 네어트어족의 조어이기도 하다. 이 문서에서는 가장 사용자가 많았던 민중 네어트어를 기준으로 설명한다.
 ### 명칭
 한자로 <ruby>내탁어<rt>奈卓語</rt></ruby> 혹은 <ruby>내덕어<rt>奈德語</rt></ruby>라고 한다. 짧게 <ruby>내어<rt>奈語</rt></ruby>라고 하기도 한다.
 ### 역사
 ### 정서법
 ### 음운론
+#### 자음
+<div class="scrollable">
+<table>
+<tr>
+<td></td><td>양순</td><td>순치</td><td>치경</td><td>후치경</td><td>경구개</td><td>연구개</td>
+</tr>
+<tr>
+<td>비음</td><td>&lt;m&gt;<br>/m/</td><td></td><td>&lt;n&gt;<br>/n/</td><td></td><td></td><td></td>
+</tr>
+<tr>
+<td>파열음</td><td></td><td></td><td>&lt;t&gt;<br>/t/</td><td></td><td></td><td>&lt;k&gt; &lt;g&gt;<br>/k/ /g/</td>
+</tr>
+<tr>
+<td>파찰음</td><td></td><td></td><td>&lt;c&gt;<br>/ts/</td><td>&lt;č&gt;<br>/tʃ/</td><td></td><td></td>
+</tr>
+<tr>
+<td>마찰음</td><td></td><td>&lt;f&gt;<br>/f/</td><td></td><td>&lt;š&gt; &lt;ž&gt;<br>/ʃ/ /ʒ/</td><td></td><td>&lt;x&gt; &lt;γ&gt;<br>/x/ /ɣ/</td>
+</tr>
+<tr>
+<td>접근음</td><td></td><td></td><td></td><td></td><td>&lt;j&gt;<br>/j/</td><td></td>
+</tr>
+<tr>
+<td>설측 접근음</td><td></td><td></td><td>&lt;l&gt;<br>/l/</td><td></td><td></td><td></td>
+</tr>
+</table>
+</div>
+
+#### 모음
+#### 강세
+#### 음절 구조
 ### 문법
 <table><tr><td>
 <span style="color:#5064C8;">&gt;</span> 자세한 내용은 <a href="네어트어 문법">네어트어 문법</a>을 참고하십시오.
