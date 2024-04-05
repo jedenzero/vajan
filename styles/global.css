@@ -116,6 +116,7 @@ table{
 }
 td{
      padding:10px;
+     white-space:nowrap;
 }
 blockquote{
      margin-left:10px;
