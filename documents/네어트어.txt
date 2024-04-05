@@ -59,7 +59,7 @@
 <td>파찰음</td><td></td><td></td><td>c<br>/ts/</td><td>č<br>/tʃ/</td><td></td><td></td>
 </tr>
 <tr>
-<td>마찰음</td><td></td><td>&lt;f&gt;<br>/f/</td><td></td><td>š ž<br>/ʃ/ /ʒ/</td><td></td><td>x γ<br>/x/ /ɣ/</td>
+<td>마찰음</td><td></td><td>f<br>/f/</td><td></td><td>š ž<br>/ʃ/ /ʒ/</td><td></td><td>x γ<br>/x/ /ɣ/</td>
 </tr>
 <tr>
 <td>접근음</td><td></td><td></td><td></td><td></td><td>j<br>/j/</td><td></td>
