@@ -45,7 +45,7 @@
 ### 음운론
 #### 자음
 <div class="scrollable">
-<table>
+<table style="text-align:center;">
 <tr>
 <td></td><td>양순</td><td>순치</td><td>치경</td><td>후치경</td><td>경구개</td><td>연구개</td>
 </tr>
@@ -71,7 +71,7 @@
 </div>
 
 #### 모음
-<table>
+<table style="text-align:center;">
 <tr>
 <td></td><td>전설</td><td>중설</td><td>후설</td>
 </tr>
