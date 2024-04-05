@@ -50,28 +50,46 @@
 <td></td><td>양순</td><td>순치</td><td>치경</td><td>후치경</td><td>경구개</td><td>연구개</td>
 </tr>
 <tr>
-<td>비음</td><td>&lt;m&gt;<br>/m/</td><td></td><td>&lt;n&gt;<br>/n/</td><td></td><td></td><td></td>
+<td>비음</td><td>m<br>/m/</td><td></td><td>n<br>/n/</td><td></td><td></td><td></td>
 </tr>
 <tr>
-<td>파열음</td><td></td><td></td><td>&lt;t&gt;<br>/t/</td><td></td><td></td><td>&lt;k&gt; &lt;g&gt;<br>/k/ /g/</td>
+<td>파열음</td><td></td><td></td><td>t<br>/t/</td><td></td><td></td><td>k g<br>/k/ /g/</td>
 </tr>
 <tr>
-<td>파찰음</td><td></td><td></td><td>&lt;c&gt;<br>/ts/</td><td>&lt;č&gt;<br>/tʃ/</td><td></td><td></td>
+<td>파찰음</td><td></td><td></td><td>c<br>/ts/</td><td>č<br>/tʃ/</td><td></td><td></td>
 </tr>
 <tr>
-<td>마찰음</td><td></td><td>&lt;f&gt;<br>/f/</td><td></td><td>&lt;š&gt; &lt;ž&gt;<br>/ʃ/ /ʒ/</td><td></td><td>&lt;x&gt; &lt;γ&gt;<br>/x/ /ɣ/</td>
+<td>마찰음</td><td></td><td>&lt;f&gt;<br>/f/</td><td></td><td>š ž<br>/ʃ/ /ʒ/</td><td></td><td>x γ<br>/x/ /ɣ/</td>
 </tr>
 <tr>
-<td>접근음</td><td></td><td></td><td></td><td></td><td>&lt;j&gt;<br>/j/</td><td></td>
+<td>접근음</td><td></td><td></td><td></td><td></td><td>j<br>/j/</td><td></td>
 </tr>
 <tr>
-<td>설측 접근음</td><td></td><td></td><td>&lt;l&gt;<br>/l/</td><td></td><td></td><td></td>
+<td>설측 접근음</td><td></td><td></td><td>l<br>/l/</td><td></td><td></td><td></td>
 </tr>
 </table>
 </div>
 
 #### 모음
+<table>
+<tr>
+<td></td><td>전설</td><td>중설</td><td>후설</td>
+</tr>
+<tr>
+<td>고모음</td><td>i y<br>/i/ /y/</td><td></td><td>u<br>/u/</td>
+</tr>
+<tr>
+<td>중고모음</td><td>e<br>/e/</td><td></td><td>o<br>/o/</td>
+</tr>
+<tr>
+<td>중저모음</td><td></td><td></td><td>ă<br>/ʌ/</td>
+</tr>
+<tr>
+<td>저모음</td><td><br></td><td>a<br>/ä/</td><td></td>
+</tr>
+</table>
 #### 강세
+네어트어 단어의 강세는 보통 단어의 뒤에서 두 번째 음절에 온다.
 #### 음절 구조
 ### 문법
 <table><tr><td>
