@@ -18,6 +18,7 @@ export default function Doc() {
         const data = await response.json();
         if (isActive) {
           setContent(marked.parse(data.content));
+          console.log(data.content);
         }
       } catch (error) {
         console.error('Error:', error);
