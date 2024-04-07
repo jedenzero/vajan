@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import marked from 'marked';
-import Script from 'next/script'
+import Script from 'next/script';
 
 export default function Doc() {
   const router = useRouter();
   const { doc } = router.query;
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
+  const [loadedContent, setLoadedContent] = useState(''); // 상태로 관리
 
   useEffect(() => {
     let isActive = true;
@@ -19,6 +20,7 @@ export default function Doc() {
         const data = await response.json();
         if (isActive) {
           setContent(marked.parse(data.content));
+          setLoadedContent(data.content); // 상태 업데이트
           console.log(data.content);
         }
       } catch (error) {
@@ -49,6 +51,13 @@ export default function Doc() {
     };
   }, [doc]);
 
+  const handleScriptLoad = () => {
+    if(typeof window.parse === "function"){ // window 객체를 통해 함수 접근
+      setContent(window.parse(loadedContent)); // 안전하게 함수 호출
+      console.log('Script loaded successfully!');
+    }
+  };
+
   return (
     <>
       <div id="header">
@@ -63,7 +72,10 @@ export default function Doc() {
           </p>
         ))}
       </div>
-      <Script src="https://raw.githubusercontent.com/jedenzero/zekalje/main/index.js" strategy="afterInteractive" />
+      <Script 
+        src="https://raw.githubusercontent.com/jedenzero/zekalje/main/index.js" 
+        strategy="afterInteractive" 
+        onLoad={handleScriptLoad} />
     </>
   );
 }
