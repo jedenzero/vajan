@@ -38,7 +38,7 @@ export default function Doc() {
     //[링크 이름 바꿈](example.org)
     input=input.replace(/\[([^\[\]\n]+)\]\(([^\(\)]+)\)/g,'<a href="$2">$1</a>');
     //> 인용
-    input=input.replace(/> (.+)(?=(?:\n\n|$))/g,'<blockquote>$1</blockquote>');
+    input=input.replace(/(?<=\n)> (.+)(?=(?:\n\n|$))/g,'<blockquote>$1</blockquote>');
     //---
     input=input.replace(/(?<=\n)-{3,}(?=\n)/,'<hr>');
     //(P-진행률)
