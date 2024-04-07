@@ -73,7 +73,7 @@ export default function Doc() {
     input=input.split(/\n\n|(?<=(?:<\/h[1-6]>)\n/).map(line =>`<p>${line}</p>`).join('');
     //<br> 태그
     input=input.replace(/ {2}\n/g,'<br>');
-    //\n없애기기
+    //\n없애기
     input=input.replace(/\n/g,'');
     return input;
   }
