@@ -70,9 +70,11 @@ export default function Doc() {
       return result;
     });
     //<p> 태그
-    input=input.split(/\n\n|(?<=(?:<\/h[1-6]>\n))/).map(line =>`<p>${line}</p>`).join('');
+    input=input.split(/\n\n|(?<=(?:<\/h[1-6]>)\n/).map(line =>`<p>${line}</p>`).join('');
     //<br> 태그
-    input=input.replace(/ {2}/g,'<br>');
+    input=input.replace(/ {2}\n/g,'<br>');
+    //\n없애기기
+    input=input.replace(/\n/g,'');
     return input;
   }
   useEffect(() => {
