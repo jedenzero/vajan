@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import marked from 'marked';
+import Script from 'next/script'
 
 export default function Doc() {
   const router = useRouter();
@@ -62,6 +63,7 @@ export default function Doc() {
           </p>
         ))}
       </div>
+      <Script src="https://raw.githubusercontent.com/jedenzero/zekalje/main/index.js" strategy="afterInteractive" />
     </>
   );
 }
