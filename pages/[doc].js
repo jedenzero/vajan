@@ -69,8 +69,17 @@ export default function Doc() {
       }
       return result;
     });
-    //<p> 태그
-    input=input.split(/\n\n|(?<=(?:<\/h[1-6]>)\n/).map(line =>`<p>${line}</p>`).join('');
+    input = input
+    .replace(/(<\/h[1-6]>)/g, '$1\n\n')
+    .replace(/(<h[1-6]>)/g, '\n\n$1')
+    .split(/\n\n+/)
+    .map(line => {
+      if (!line.match(/<\/?h[1-6]>/) && line.trim() !== '') {
+        return `<p>${line.trim()}</p>`;
+      }
+      return line.trim();
+    })
+    .join('');
     //<br> 태그
     input=input.replace(/ {2}\n/g,'<br>');
     //\n없애기
