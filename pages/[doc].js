@@ -38,8 +38,8 @@ export default function Doc() {
     //[링크 이름 바꿈](example.org)
     input=input.replace(/\[([^\[\]\n]+)\]\(([^\(\)]+)\)/g,'<a href="$2">$1</a>');
     //> 인용
-    input = input.replace(/(?:\n|^)> ([^\n]+(?:\n[^\n>]+)*)/g, function(match, p1) {
-      return `<blockquote>${p1.replace(/  \n/g, '<br>')}</blockquote>`;
+    input = input.replace(/(?:\n|^)>( [^\n]*(?:\n(?!>\n|[\n$])[^\n]*)*)/g, function(match, p1) {
+      return `<blockquote>${p1.trim().replace('  \n','<br>').replace('\n','')}</blockquote>`;
     });
     //---
     input=input.replace(/(?<=\n)-{3,}(?=\n)/,'<hr>');
