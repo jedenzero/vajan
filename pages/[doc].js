@@ -19,12 +19,12 @@ export default function Doc() {
     input=input.replace(/\*([^\*\n]+)\*/g,'<i>$1</i>');
     //%하이라이트%
     input=input.replace(/\%([^\%\n]+)\%/g,'<mark>$1</mark>');
-    //+윗줄+
-    input=input.replace(/\+([^\+\n]+)\+/g,'<span style="text-decoration:overline;">$1</span>');
-    //~취소선~
-    input=input.replace(/~([^\~\n]+)~/g,'<span style="text-decoration:line-through;">$1</span>');
-    //_밑줄_
-    input=input.replace(/_([^\_\n]+)_/g,'<span style="text-decoration:underline;">$1</span>');
+    //++윗줄++
+    input=input.replace(/\+\+([^\+\n]+)\+\+/g,'<span style="text-decoration:overline;">$1</span>');
+    //~~취소선~~
+    input=input.replace(/~~([^\~\n]+)~~/g,'<span style="text-decoration:line-through;">$1</span>');
+    //__밑줄__
+    input=input.replace(/__([^\_\n]+)__/g,'<span style="text-decoration:underline;">$1</span>');
     //^윗첨자^
     input=input.replace(/\^([^\^\n]+)\^/g,'<sup>$1</sup>');
     //..밑첨자..
