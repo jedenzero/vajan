@@ -12,23 +12,23 @@ export default function Doc() {
     //<p> 태그(舊)
     //input=input.replace(/(?=(?:\n\n)|^)([^#\n ]+)(?=(?:\n#+ [^ ]))||(?<=(?:#+ [^ ]+\n))([^#\n ]+)(?=(?:\n\n)|$)||(?<=(?:\n\n))([^\n ]+)(?=(?:\n\n))/g,'<p>$1</p>');
     // ***굵고 기울어진 글씨***
-    input=input.replace(/\*\*\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*\*\*/g,'$1<b><i>$2</i></b>');
+    input=input.replace(/\*\*\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*\*\*/g,'<b><i>$1</i></b>');
     // **굵은 글씨**
-    input=input.replace(/\*\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*\*/g,'$1<b>$2</b>');
+    input=input.replace(/\*\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*\*/g,'<b>$1</b>');
     // *기울어진 글씨*
-    input=input.replace(/\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*/g,'$1<i>$2</i>');
+    input=input.replace(/\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*/g,'<i>$1</i>');
     // %하이라이트%
-    input=input.replace(/\%([^\%\n ]|[^\%\n ][^\%\n]*[^\%\n ])\%/g,'$1<mark>$2</mark>');
+    input=input.replace(/\%([^\%\n ]|[^\%\n ][^\%\n]*[^\%\n ])\%/g,'<mark>$1</mark>');
     // ++윗줄++
-    input=input.replace(/\+\+([^\+\n ]|[^\+\n ][^\+\n]*[^\+\n ])\+\+/g,'$1<span style="text-decoration:overline;">$2</span>');
+    input=input.replace(/\+\+([^\+\n ]|[^\+\n ][^\+\n]*[^\+\n ])\+\+/g,'<span style="text-decoration:overline;">$1</span>');
     // ~~취소선~~
-    input=input.replace(/~~([^\~\n ]|[^\~\n ][^\~\n]*[^\~\n ])\~~/g,'$1<span style="text-decoration:line-through;">$2</span>');
+    input=input.replace(/~~([^\~\n ]|[^\~\n ][^\~\n]*[^\~\n ])\~~/g,'<span style="text-decoration:line-through;">$1</span>');
     // __밑줄__
-    input=input.replace(/__([^\_\n ]|[^\_\n ][^\_\n]*[^\_\n ])__/g,'$1<span style="text-decoration:underline;">$2</span>');
+    input=input.replace(/__([^\_\n ]|[^\_\n ][^\_\n]*[^\_\n ])__/g,'<span style="text-decoration:underline;">$1</span>');
     // ^윗첨자^
-    input=input.replace(/\^([^\^\n ]|[^\^\n ][^\^\n]*[^\^\n ])\^/g,'$1<sup>$2</sup>');
+    input=input.replace(/\^([^\^\n ]|[^\^\n ][^\^\n]*[^\^\n ])\^/g,'<sup>$1</sup>');
     // ..밑첨자..
-    input=input.replace(/\.\.([^\.\n ]|[^\.\n ][^\.\n]*[^\.\n ])\.\./g,'$1<sub>$2</sub>');
+    input=input.replace(/\.\.([^\.\n ]|[^\.\n ][^\.\n]*[^\.\n ])\.\./g,'<sub>$1</sub>');
     //# h1, ## h2, ### h3, ...
     input=input.replace(/(?<=\n)(#{1,6}) ([^\n]+)/g,function(match,hashes,text){
       return `<h${hashes.length}>${text}</h${hashes.length}>`;
