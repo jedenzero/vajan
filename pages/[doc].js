@@ -8,11 +8,6 @@ export default function Doc() {
   const [docs, setDocs] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   
-  document.getElementById('input').addEventListener('focus',
-  function(event){
-  event.preventDefault();
-  },true);
-  
   function parse(input) {
     //<p> 태그(舊)
     //input=input.replace(/(?=(?:\n\n)|^)([^#\n ]+)(?=(?:\n#+ [^ ]))||(?<=(?:#+ [^ ]+\n))([^#\n ]+)(?=(?:\n\n)|$)||(?<=(?:\n\n))([^\n ]+)(?=(?:\n\n))/g,'<p>$1</p>');
