@@ -145,14 +145,14 @@ export default function Doc() {
     <>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
-        <input type="text" id="input" onChange={search} onBlur={off}/>
+        <input type="text" id="input" onChange={search}/>
       </div>
       <div id="result">
         {searchResult.map(el => (
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
-      <div id="contain">
+      <div id="contain" onClick={off}>
         <h2>{doc || '대문'}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
