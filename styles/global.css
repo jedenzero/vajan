@@ -87,18 +87,20 @@ body{
       margin-top:15px;
       border:none;
       outline:none;
-      font-size:20px;
+      font-size:15px;
       font-family:"Montserrat","Noto Sans","Noto Sans KR";
       color:#374052;
       font-weight:300,700;
       background-color:#FAFAFA;
+      box-shadow:0 2px 0 0 #1D2F52;
 }
 #result{
      position:sticky;
      box-sizing:border-box;
      top:50px;
      width:100%;
-     padding-right:calc(50%-100px);
+     background-color:#FAFAFA;
+     padding-right:calc(50% - 100px);
 }
 img{
      display:block;
