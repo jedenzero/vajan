@@ -90,6 +90,16 @@ export default function Doc() {
     input=input.replace(/\n/g,'');
     return input;
   }
+  function search(){
+    const input=document.getElementById("input").value;
+    const result=document.getElementById("result");
+    result.textContent='';
+    docs.filter(el=>el.includes(input)).forEach(el=>{
+      var r=document.createElement("div");
+      r.innerHTML=`<div><a href="${el}">${el}</a></div>`;
+      result.appendChild(r);
+    });
+  }
   useEffect(() => {
     let isActive = true;
     const docName = doc ? `${doc}.txt` : '대문.txt';
@@ -134,7 +144,9 @@ export default function Doc() {
     <>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
+        <input type="text" id="input"/>
       </div>
+      <div id="result"></div>
       <div id="contain">
         <h2>{doc || '대문'}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
