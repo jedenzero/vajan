@@ -100,8 +100,9 @@ body{
      position:sticky;
      top:50px;
      box-sizing:border-box;
-     background-color:#1D2F5299;
-     color:#FAFAFA !important;
+     background-color:#F0F0F099;
+     backdrop-filter:blur(4px);
+     -webkit-backdrop-filter: blur(4px);
      padding-left:calc(50% - 100px);
 }
 img{
