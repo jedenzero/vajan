@@ -145,7 +145,7 @@ export default function Doc() {
     <>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
-        <input type="text" id="input" onChange={search} onFocusOut={off}/>
+        <input type="text" id="input" onChange={search} onBlur={off}/>
       </div>
       <div id="result">
         {searchResult.map(el => (
