@@ -7,7 +7,7 @@ export default function Doc() {
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
   const [loadedContent, setLoadedContent] = useState('');
-  
+  const [searchResult, setSearchResult]=useState([]);
   function parse(input) {
     //<p> 태그(舊)
     //input=input.replace(/(?=(?:\n\n)|^)([^#\n ]+)(?=(?:\n#+ [^ ]))||(?<=(?:#+ [^ ]+\n))([^#\n ]+)(?=(?:\n\n)|$)||(?<=(?:\n\n))([^\n ]+)(?=(?:\n\n))/g,'<p>$1</p>');
@@ -94,11 +94,7 @@ export default function Doc() {
     const input=document.getElementById("input").value;
     const result=document.getElementById("result");
     result.textContent='';
-    docs.filter(el=>el.includes(input)).forEach(el=>{
-      var r=document.createElement("div");
-      r.innerHTML=`<div><a href="${el}">${el}</a></div>`;
-      result.appendChild(r);
-    });
+    setSearchResult(docs.filter(el=>el.includes(input)));
   }
   useEffect(() => {
     let isActive = true;
@@ -144,9 +140,13 @@ export default function Doc() {
     <>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
-        <input type="text" id="input"/>
+        <input type="text" id="input" onChange={search}/>
       </div>
-      <div id="result"></div>
+      <div id="result">
+        {searchResult.map((el,index)=>(
+          <div key={index}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
+        ))}
+      </div>
       <div id="contain">
         <h2>{doc || '대문'}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
