@@ -143,8 +143,8 @@ export default function Doc() {
         <input type="text" id="input" onChange={search}/>
       </div>
       <div id="result">
-        {searchResult.map((el,index)=>(
-          <div key={index}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
+        {searchResult.map(el=>(
+          <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
       <div id="contain">
