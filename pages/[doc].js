@@ -99,6 +99,10 @@ export default function Doc() {
     }
     setSearchResult(docs.filter(el => el.includes(input)));
   }
+  
+  function off(){
+    setSearchResult([]);
+  }
 
   useEffect(() => {
     let isActive = true;
@@ -141,7 +145,7 @@ export default function Doc() {
     <>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
-        <input type="text" id="input" onChange={search}/>
+        <input type="text" id="input" onChange={search} onFocusOut={off}/>
       </div>
       <div id="result">
         {searchResult.map(el => (
@@ -151,7 +155,7 @@ export default function Doc() {
       <div id="contain">
         <h2>{doc || '대문'}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        {docs.length > 0 && docs.map((el, index) => (
+        {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
           <p key={index}>
             <a href={`/${el.split('.txt')[0]}`} style={{ color: '#374052' }}>{el.split('.txt')[0]}</a>
           </p>
