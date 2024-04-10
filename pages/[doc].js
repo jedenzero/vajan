@@ -6,8 +6,8 @@ export default function Doc() {
   const { doc } = router.query;
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
-  const [loadedContent, setLoadedContent] = useState('');
-  const [searchResult, setSearchResult]=useState([]);
+  const [searchResult, setSearchResult] = useState([]);
+
   function parse(input) {
     //<p> 태그(舊)
     //input=input.replace(/(?=(?:\n\n)|^)([^#\n ]+)(?=(?:\n#+ [^ ]))||(?<=(?:#+ [^ ]+\n))([^#\n ]+)(?=(?:\n\n)|$)||(?<=(?:\n\n))([^\n ]+)(?=(?:\n\n))/g,'<p>$1</p>');
@@ -90,12 +90,16 @@ export default function Doc() {
     input=input.replace(/\n/g,'');
     return input;
   }
-  function search(){
-    const input=document.getElementById("input").value;
-    const result=document.getElementById("result");
-    result.textContent='';
-    setSearchResult(docs.filter(el=>el.includes(input)));
+
+  function search(event){
+    const input = event.target.value;
+    if(!input) {
+      setSearchResult([]);
+      return;
+    }
+    setSearchResult(docs.filter(el => el.includes(input)));
   }
+
   useEffect(() => {
     let isActive = true;
     const docName = doc ? `${doc}.txt` : '대문.txt';
@@ -106,7 +110,6 @@ export default function Doc() {
         const data = await response.json();
         if (isActive) {
           setContent(parse(data.content));
-          console.log(data.content);
         }
       } catch (error) {
         console.error('Error:', error);
@@ -115,21 +118,19 @@ export default function Doc() {
 
     fetchContent();
 
-    if (!doc || doc === '대문') {
-      const fetchDocs = async () => {
-        try {
-          const response = await fetch('https://vajan.vercel.app/api/getDocs');
-          const data = await response.json();
-          if (isActive) {
-            setDocs(data.fileNames);
-          }
-        } catch (error) {
-          console.error('Error:', error);
+    const fetchDocs = async () => {
+      try {
+        const response = await fetch('https://vajan.vercel.app/api/getDocs');
+        const data = await response.json();
+        if (isActive) {
+          setDocs(data.fileNames);
         }
-      };
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
 
-      fetchDocs();
-    }
+    fetchDocs();
 
     return () => {
       isActive = false;
@@ -143,14 +144,14 @@ export default function Doc() {
         <input type="text" id="input" onChange={search}/>
       </div>
       <div id="result">
-        {searchResult.map(el=>(
+        {searchResult.map(el => (
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
       <div id="contain">
         <h2>{doc || '대문'}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        {(!doc || doc === '대문') && docs.length > 0 && docs.map((el, index) => (
+        {docs.length > 0 && docs.map((el, index) => (
           <p key={index}>
             <a href={`/${el.split('.txt')[0]}`} style={{ color: '#374052' }}>{el.split('.txt')[0]}</a>
           </p>
