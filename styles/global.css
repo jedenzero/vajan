@@ -101,7 +101,7 @@ body{
      top:50px;
      box-sizing:border-box;
      background-color:#1D2F5299;
-     color:#FAFAFA;
+     color:#FAFAFA !important;
      padding-left:calc(50% - 100px);
 }
 img{
