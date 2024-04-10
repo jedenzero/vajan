@@ -149,7 +149,7 @@ export default function Doc() {
       </div>
       <div id="result">
         {searchResult.map(el => (
-          <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></div>
+          <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`} style={{ color: '#282828' }}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
       <div id="contain" onClick={off}>
