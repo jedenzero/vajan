@@ -78,9 +78,11 @@ body{
      background-color:#1D2F52;
 }
 #input{
+      box-sizing:border-box;
       width:150px;
       height:20px;
       padding:0;
+      padding-left:10px;
       margin-left:auto;
       margin-right:20px;
       margin-bottom:auto;
@@ -89,10 +91,9 @@ body{
       outline:none;
       font-size:15px;
       font-family:"Montserrat","Noto Sans","Noto Sans KR";
-      color:#374052;
       font-weight:300,700;
-      background-color:#FAFAFA;
-      box-shadow:0 2px 0 0 #1D2F52;
+      color:#282828;
+      background-color:#F0F0F0;
 }
 #result{
      position:sticky;
@@ -100,7 +101,9 @@ body{
      top:50px;
      width:100%;
      background-color:#FAFAFA;
-     padding-right:calc(50% - 100px);
+     backdrop-filter:blur(4px);
+     -webkit-backdrop-filter: blur(4px);
+     padding-left:calc(50% - 100px);
 }
 img{
      display:block;
