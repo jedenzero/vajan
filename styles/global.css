@@ -97,13 +97,7 @@ body{
       background-color:#F0F0F0;
 }
 #result{
-     position:sticky;
      box-sizing:border-box;
-     top:50px;
-     width:100%;
-     background-color:#FAFAFA80;
-     backdrop-filter:blur(4px);
-     -webkit-backdrop-filter: blur(4px);
      padding-left:calc(50% - 100px);
 }
 img{
