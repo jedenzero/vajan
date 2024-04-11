@@ -30,7 +30,7 @@ export default function Doc() {
     // ..밑첨자..
     input=input.replace(/\.\.([^\.\n ]|[^\.\n ][^\.\n]*[^\.\n ])\.\./g,'<sub>$1</sub>');
     //# h1, ## h2, ### h3, ...
-    input=input.replace(/(?<=\n)(#{1,6}) ([^\n]+)/g,function(match,hashes,text){
+    input=input.replace(/(?<=\n|^)(#{1,6}) ([^\n]+)/g,function(match,hashes,text){
       return `<h${hashes.length}>${text}</h${hashes.length}>`;
     });
     //[링크 그대로]
