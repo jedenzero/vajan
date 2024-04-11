@@ -1,2 +1,32 @@
-## 개요
+<table>
+	<tr>
+		<td>원어 명칭</td>
+    <td>142857*placeholder*</td>
+	</tr>
+	<tr>
+    <td>문자</td>
+    <td>placeholder</td>
+  </tr>
+  <tr>
+    <td>어순</td>
+    <td>SOV</td>
+  </tr>
+  <tr>
+    <td>유형</td>
+    <td>교착어</td>
+  </tr>
+	<tr>
+    <td>이전 형태</td>
+    <td>plhdr</td>
+  </tr>
+  <tr>
+    <td>계통</td>
+    <td>[이녠어족]의 조어</td>
+  </tr>
+  <tr>
+    <td>언어 코드</td>
+    <td>in</td>
+  </tr>
+</table>
+### 개요
 **이샤이어**는 [이샤이]에서 주로 쓰였던 SVO 교착어이다.
