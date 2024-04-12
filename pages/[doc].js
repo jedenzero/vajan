@@ -95,7 +95,7 @@ export default function Doc() {
 
   function search(event){
     const input = event.target.value;
-    if(!input||docs.filter(el => el.includes(input))){
+    if(!input){
       setSearchResult([]);
       setVisibility(false);
       return;
