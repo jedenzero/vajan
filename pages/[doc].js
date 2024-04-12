@@ -95,13 +95,14 @@ export default function Doc() {
 
   function search(event){
     const input = event.target.value;
-    if(!input) {
+    if(!input||docs.filter(el => el.includes(input))){
       setSearchResult([]);
       setVisibility(false);
       return;
     }
-    setSearchResult(docs.filter(el => el.includes(input)));
-    setVisibility(true);
+    const i=docs.filter(el => el.includes(input));
+    setSearchResult(i);
+    setVisibility(i.length>0);
   }
   
   function off(){
@@ -153,14 +154,14 @@ export default function Doc() {
       </head>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
-        <input type="text" id="input" onChange={search}/>
+        <input type="text" id="input" onChange={search} onBlur={off}/>
       </div>
       <div id="result" style={{display:visibility?'block':'none'}}>
         {searchResult.map(el => (
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`} style={{ color: '#282828' }}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
-      <div id="contain" onClick={off}>
+      <div id="contain">
         <h2>{doc}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
