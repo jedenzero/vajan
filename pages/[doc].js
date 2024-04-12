@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 export default function Doc() {
   const router = useRouter();
@@ -143,6 +144,9 @@ export default function Doc() {
   
   return (
     <>
+      <head>
+        <title>{`${doc} - 바얀`}</title>
+      </head>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
         <input type="text" id="input" onChange={search}/>
@@ -153,7 +157,7 @@ export default function Doc() {
         ))}
       </div>
       <div id="contain" onClick={off}>
-        <h2>{doc || '대문'}</h2>
+        <h2>{doc}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
           <p key={index}>
