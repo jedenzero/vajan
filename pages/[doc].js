@@ -8,6 +8,7 @@ export default function Doc() {
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
+  const [visibility, setVisibility] = useState(false);
   
   function parse(input) {
     //<p> 태그(舊)
@@ -96,13 +97,16 @@ export default function Doc() {
     const input = event.target.value;
     if(!input) {
       setSearchResult([]);
+      setVisibility(false);
       return;
     }
     setSearchResult(docs.filter(el => el.includes(input)));
+    setVisibility(true);
   }
   
   function off(){
     setSearchResult([]);
+    setVisibility(false);
   }
 
   useEffect(() => {
@@ -151,7 +155,7 @@ export default function Doc() {
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
         <input type="text" id="input" onChange={search}/>
       </div>
-      <div id="result">
+      <div id="result" style={{visibility:visibility?'visible':'hidden'}}>
         {searchResult.map(el => (
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`} style={{ color: '#282828' }}>{el.split(".txt")[0]}</a></div>
         ))}
