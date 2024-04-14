@@ -7,6 +7,7 @@ export default function Doc() {
   const { doc } = router.query;
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const [resultVisibility, setResultVisibility] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -101,7 +102,7 @@ export default function Doc() {
       setResultVisibility(false);
       return;
     }
-    const i=docs.filter(el => el.includes(input)).filter(el=>!el.includes(':')||input.startsWith(el.split(':')[0])+':');
+    const i=docs.filter(el => el.includes(input)).filter(el=>!el.includes(':')||input.startsWith(el.split(':')[0]+':'));
     const result=[...i.filter(el=>el===input), ...i.filter(el=>el!=input&&el.startsWith(input)), ...i.filter(el=>!el.startsWith(input))];
     setSearchResult(result);
     setResultVisibility(i.length>0);
@@ -132,9 +133,9 @@ export default function Doc() {
       }
     };
 
-    fetchContent();
+  fetchContent();
 
-    const fetchDocs = async () => {
+  const fetchDocs = async () => {
       try {
         const response = await fetch('https://vajan.vercel.app/api/getDocs');
         const data = await response.json();
@@ -144,14 +145,36 @@ export default function Doc() {
       } catch (error) {
         console.error('Error:', error);
       }
-    };
+  };
 
-    fetchDocs();
+  fetchDocs();
+  
+  useEffect(() => {
+    let isActive = true;
+    const categories = docs.filter(el=>el.startsWith('분류:'));
 
-    return () => {
-      isActive = false;
+    const fetchCategories = async () => {
+      var result=[];
+      for(const el of categories){
+      try {
+        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
+        const data = await response.json();
+        if (isActive&&parse(data.content).includes('[${doc}]')){
+          result.push(el);
+        }
+      }catch(error){
+        console.error('Error:', error);
+      }
+      };
+      setCategories(result);
     };
-  }, [doc]);
+    
+    fetchCategories();
+
+  return () => {
+    isActive = false;
+  };
+}, [doc]);
   
   return (
     <>
@@ -167,7 +190,11 @@ export default function Doc() {
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`} style={{ color: '#282828' }}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
-      <div id="category"></div>
+      <div id="category">
+        {categories.map(el => (
+          <span key={'CATEGORY'+el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`}>{el.split(".txt")[0]}</a></span>
+        ))}
+      </div>
       <div id="contain">
         <h2>{doc}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
