@@ -20,8 +20,8 @@ export default function Doc() {
     input=input.replace(/\*\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*\*/g,'<b>$1</b>');
     // *기울어진 글씨*
     input=input.replace(/\*([^\*\n ]|[^\*\n ][^\*\n]*[^\*\n ])\*/g,'<i>$1</i>');
-    // %하이라이트%
-    input=input.replace(/\%([^\%\n ]|[^\%\n ][^\%\n]*[^\%\n ])\%/g,'<mark>$1</mark>');
+    // %하이라이트% 생각해보니 필요 없음
+    //input=input.replace(/\%([^\%\n ]|[^\%\n ][^\%\n]*[^\%\n ])\%/g,'<mark>$1</mark>');
     // ++윗줄++
     input=input.replace(/\+\+([^\+\n ]|[^\+\n ][^\+\n]*[^\+\n ])\+\+/g,'<span style="text-decoration:overline;">$1</span>');
     // ~~취소선~~
@@ -51,7 +51,7 @@ export default function Doc() {
     //(P-진행률)
     input=input.replace(/\(P-([0-9]{1,2}|100)\)/,'<progress max="100" value="$1">$1%</progress>');
     //* 리스트
-    input=input.replace(/(?<=\n|^)(\*+ .+\n)+(?=(?:[^\*]|\*+\S|$))/g, function(match){
+    input=input.replace(/(?<=\n|^)(\*+ .+\n)+(\*+ .+)(?=(?:\n[^\*]|\n\*+\S|$))/g, function(match){
       var lines=match.trim().split('\n');
       var result='';
       var stack=[];
