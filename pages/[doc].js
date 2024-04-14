@@ -151,11 +151,11 @@ export default function Doc() {
   
   useEffect(() => {
     let isActive = true;
-    const categories = docs.filter(el=>el.startsWith('분류:'));
+    const i = docs.filter(el=>el.startsWith('분류:'));
 
     const fetchCategories = async () => {
       var result=[];
-      for(const el of categories){
+      for(const el of i){
       try {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
         const data = await response.json();
