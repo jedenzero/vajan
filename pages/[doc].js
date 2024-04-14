@@ -148,8 +148,13 @@ export default function Doc() {
   };
 
   fetchDocs();
-  
-  useEffect(() => {
+
+  return () => {
+    isActive = false;
+  };
+}, [doc]);
+
+useEffect(() => {
     let isActive = true;
     const i = docs.filter(el=>el.startsWith('분류:'));
 
@@ -159,7 +164,7 @@ export default function Doc() {
       try {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
         const data = await response.json();
-        if (isActive&&parse(data.content).includes('[${doc}]')){
+        if (isActive&&parse(data.content).includes(`[${doc}]`)){
           result.push(el);
         }
       }catch(error){
@@ -170,12 +175,11 @@ export default function Doc() {
     };
     
     fetchCategories();
-
   return () => {
     isActive = false;
   };
 }, [doc]);
-  
+
   return (
     <>
       <head>
