@@ -8,7 +8,7 @@ export default function Doc() {
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
-  const [visibility, setVisibility] = useState(false);
+  const [resultVisibility, setResultVisibility] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   
   function parse(input) {
@@ -98,12 +98,13 @@ export default function Doc() {
     const input = event.target.value;
     if(!input){
       setSearchResult([]);
-      setVisibility(false);
+      setResultVisibility(false);
       return;
     }
-    const i=docs.filter(el => el.includes(input));
-    setSearchResult(i);
-    setVisibility(i.length>0);
+    const i=docs.filter(el => el.includes(input)).filter(el=>!el.includes(':')||input.startsWith(el.split(':')[0])+':');
+    const result=[...i.filter(el=>el===input), ...i.filter(el=>el!=input&&el.startsWith(input)), ...i.filter(el=>!el.startsWith(input))];
+    setSearchResult(result);
+    setResultVisibility(i.length>0);
   }
   
   function off(){
@@ -112,10 +113,9 @@ export default function Doc() {
     }
     else{
       setSearchResult([]);
-      setVisibility(false);
+      setResultVisibility(false);
     }
   }
-
   useEffect(() => {
     let isActive = true;
     const docName = doc ? `${doc}.txt` : '대문.txt';
@@ -162,11 +162,12 @@ export default function Doc() {
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
         <input type="text" id="input" onChange={search} onBlur={off}/>
       </div>
-      <div id="result" style={{display:visibility?'block':'none'}} onMouseDown={()=>setIsClicked(true)}>
+      <div id="result" style={{display:resultVisibility?'block':'none'}} onMouseDown={()=>setIsClicked(true)}>
         {searchResult.map(el => (
           <div key={el.split('.txt')[0]}><a href={`/${el.split(".txt")[0]}`} style={{ color: '#282828' }}>{el.split(".txt")[0]}</a></div>
         ))}
       </div>
+      <div id="category"></div>
       <div id="contain">
         <h2>{doc}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
