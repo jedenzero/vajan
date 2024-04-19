@@ -157,6 +157,7 @@ export default function Doc() {
 useEffect(() => {
     let isActive = true;
     const i = docs.filter(el=>el.startsWith('분류:'));
+    console.log(docs);
     console.log(i)
     const fetchCategories = async () => {
       var result=[];
