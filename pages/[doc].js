@@ -153,22 +153,19 @@ useEffect(() => {
   
   const fetchCategories = async (docs) => {
   const i = docs.filter(el=>el.startsWith('분류:'));
-  console.log(docs);
-  console.log(i);
   var result=[];
+  
   for(const el of i){
     try {
       const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
       const data = await response.json();
       if (isActive&&data.content.includes(`[${doc}]`)){
-        console.log(el);
         result.push(el);
       }
     }catch(error){
       console.error('Error:', error);
     }
     };
-    console.log(`result:${result}`)
     setCategories(result);
   };
   
