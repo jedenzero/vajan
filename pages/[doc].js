@@ -117,7 +117,8 @@ export default function Doc() {
       setResultVisibility(false);
     }
   }
-  useEffect(() => {
+
+useEffect(() => {
     let isActive = true;
     const docName = doc ? `${doc}.txt` : '대문.txt';
 
@@ -141,6 +142,7 @@ export default function Doc() {
         const data = await response.json();
         if (isActive) {
           setDocs(data.fileNames);
+          fetchCategories(data.fileNames);
         }
       } catch (error) {
         console.error('Error:', error);
@@ -148,36 +150,28 @@ export default function Doc() {
   };
 
   fetchDocs();
-
-  return () => {
-    isActive = false;
-  };
-}, [doc]);
-
-useEffect(() => {
-    let isActive = true;
-    const i = docs.filter(el=>el.startsWith('분류:'));
-    console.log(docs);
-    console.log(i)
-    const fetchCategories = async () => {
-      var result=[];
-      for(const el of i){
-      try {
-        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
-        const data = await response.json();
-        if (isActive&&data.content.includes(`[${doc}]`)){
-          console.log(el);
-          result.push(el);
-        }
-      }catch(error){
-        console.error('Error:', error);
+  
+  const fetchCategories = async (docs) => {
+  const i = docs.filter(el=>el.startsWith('분류:'));
+  console.log(docs);
+  console.log(i);
+  var result=[];
+  for(const el of i){
+    try {
+      const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
+      const data = await response.json();
+      if (isActive&&data.content.includes(`[${doc}]`)){
+        console.log(el);
+        result.push(el);
       }
-      };
-      console.log(`result:${result}`)
-      setCategories(result);
+    }catch(error){
+      console.error('Error:', error);
+    }
     };
-    
-    fetchCategories();
+    console.log(`result:${result}`)
+    setCategories(result);
+  };
+  
   return () => {
     isActive = false;
   };
