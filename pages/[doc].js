@@ -38,7 +38,7 @@ export default function Doc() {
       return `<h${hashes.length}>${text}</h${hashes.length}>`;
     });
     //[링크 그대로]
-    input=input.replace(/(?<=[^\!])\[([^\[\]\n]+)\](?=[^\(])/g,'<a href="$1">$1</a>');
+    input=input.replace(/(?<=[^\!])\[([^\[\]\n]+)\](?=[^\(]|$)/g,'<a href="$1">$1</a>');
     //[링크 이름 바꿈](example.org)
     input=input.replace(/\[([^\[\]\n]+)\]\(([^\(\)]+)\)/g,'<a href="$2">$1</a>');
     //![이미지]
