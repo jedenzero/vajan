@@ -157,7 +157,7 @@ export default function Doc() {
 useEffect(() => {
     let isActive = true;
     const i = docs.filter(el=>el.startsWith('분류:'));
-
+    console.log(i)
     const fetchCategories = async () => {
       var result=[];
       for(const el of i){
@@ -165,6 +165,7 @@ useEffect(() => {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
         const data = await response.json();
         if (isActive&&data.content.includes(`[${doc}]`)){
+          console.log(el);
           result.push(el);
         }
       }catch(error){
