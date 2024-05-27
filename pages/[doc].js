@@ -97,6 +97,7 @@ useEffect(() => {
       <head>
         <title>{`${doc} - 바얀`}</title>
       </head>
+      <div id="contain">
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
         <input type="text" id="input" onChange={search} onBlur={off}/>
@@ -111,7 +112,7 @@ useEffect(() => {
           <span key={'CATEGORY'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0]}</a></span>
         ))}
       </div>
-      <div id="contain">
+      <div id="content">
         <h2>{doc}</h2>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
@@ -119,6 +120,7 @@ useEffect(() => {
             <a href={`/${el.split('.md')[0]}`} style={{ color: '#374052' }}>{el.split('.md')[0]}</a>
           </p>
         ))}
+      </div>
       </div>
     </>
   );
