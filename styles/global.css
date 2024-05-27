@@ -1,111 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&display=swap');
-@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 body{
      margin:0;
-     font-family:"Montserrat","Noto Sans","Noto Sans KR";
-     color:#374052;
-     font-weight:300,700;
+     font-family:"IBM Plex Sans","IBM Plex Sans KR","Noto Sans KR";
+     color:#424242;
+     font-weight:400;
      font-size:12px;
      background-color:#FAFAFA;
      word-break:keep-all;
      line-height:150%;
      -ms-overflow-style:none;
 }
-.underline{
-     width:200px;
-     margin:0 auto;
-     margin-bottom:40px;
-     padding-top:0;
-     padding-bottom:0;
-     border-bottom:1px solid #1D2F52;
-     text-align:center;
-}
-.scrollable{
-     overflow-x:scroll;
-}
 #header{
-     position:sticky;
+     position:fixed;
      top:0;
-     display:flex;
      justify-content:space-between;
-     width:100%;
+     width:100dvw;
      height:50px;
      background-color:#FAFAFA;
      border-bottom:2px solid #F0F0F0;
 }
-#contain{
-     width:280px;
-     padding-left:20px;
-     padding-right:20px;
+#category{
+     box-sizing:border-box;
+     width:80dvw;
+     height:40px;
      margin:0 auto;
-     font-family:"Montserrat","Noto Sans","Noto Sans KR";
-     color:#374052;
-     font-weight:300,700;
-     font-size:12px;
-     background-color:#FAFAFA;
-     word-break:keep-all;
-     line-height:150%;
-     -ms-overflow-style:none;
-}
-#floating{
-     position:fixed;
-     left:50%;
-     transform:translate(-50%,0);
-     bottom:20px;
-     width:260px;
+     padding:10px;
      padding-left:20px;
-     padding-right:20px;
-     padding-bottom:10px;
-     border-radius:10px;
-     background-color:#FAFAFA80;
-     backdrop-filter:blur(4px);
-     -webkit-backdrop-filter: blur(4px);
+     border-radius:20px;
+     background-color:#F0F0F0;
 }
-#gnitaolf{
-     display:flex;
-     position:fixed;
-     justify-content:center;
-     align-items:center;
-     bottom:20px;
-     left:50%;
-     transform:translate(-50%,0);
-     width:50px;
-     height:50px;
-     border-radius:25px;
-     color:#F5F5F5;
-     background-color:#1D2F52;
-}
-#input{
-      box-sizing:border-box;
-      width:150px;
-      height:25px;
-      padding:0;
-      padding-left:10px;
-      margin-left:auto;
-      margin-right:20px;
-      margin-bottom:auto;
-      margin-top:12.5px;
-      border:none;
-      outline:none;
-      border-radius:12.5px;
-      font-size:16px;
-      font-family:"Montserrat","Noto Sans","Noto Sans KR";
-      font-weight:300,700;
-      color:#282828;
-      background-color:#F0F0F0;
+#category a{
+     color:#424242;
 }
 #result{
-     position:sticky;
-     top:70px;
      box-sizing:border-box;
+     position:fixed;
+     top:70px;
+     width:250px;
      margin:0 auto;
      padding:25px;
-     width:250px;
      background-color:#FAFAFA;
      box-shadow: #8C96A033 0px 2px 20px;
      border-radius:10px;
+}
+#contain{
+     width:80dvw;
+     padding-left:20px;
+     padding-right:20px;
+     margin:0 auto;
+     font-family:inherit;
+     word-break:keep-all;
+     -ms-overflow-style:none;
 }
 img{
      display:block;
@@ -113,24 +60,16 @@ img{
      width:200px;
      border-radius:10px;
 }
-h2,h3{
-     color:#1D2F52;
-}
 h2{
      font-weight:normal;
      margin-bottom:20px;
-}
-p{
-     color:#374052;
 }
 a{
      text-decoration:none;
      color:#5064C8;
 }
 table{
-     color:#374052;
      border-spacing:0;
-     margin:0 auto;
 }
 td{
      padding:10px;
@@ -139,5 +78,5 @@ td{
 blockquote{
      margin-left:10px;
      padding-left:10px;
-     border-left:2px solid #1D2F52;
+     border-left:2px solid #282828;
 }
