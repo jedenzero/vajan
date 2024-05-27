@@ -20,7 +20,7 @@ export default function Doc() {
       setResultVisibility(false);
       return;
     }
-    const i=docs.filter(el => el.includes(input)).filter(el=>!el.includes(':')||input.startsWith(el.split(':')[0]+':'));
+    const i=docs.filter(el => el.split('.md')[0].includes(input)).filter(el=>!el.includes(':')||input.startsWith(el.split(':')[0]+':'));
     const result=[...i.filter(el=>el===input), ...i.filter(el=>el!=input&&el.startsWith(input)), ...i.filter(el=>!el.startsWith(input))];
     setSearchResult(result);
     setResultVisibility(i.length>0);
@@ -97,11 +97,11 @@ useEffect(() => {
       <head>
         <title>{`${doc} - 바얀`}</title>
       </head>
-      <div id="contain">
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문" style={{ color: '#374052', marginLeft: '20px' }}>VAJAN</a></h2>
         <input type="text" id="input" onChange={search} onBlur={off}/>
       </div>
+      <div id="contain">
       <div id="result" style={{display:resultVisibility?'block':'none'}} onMouseDown={()=>setIsClicked(true)}>
         {searchResult.map(el => (
           <div key={el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`} style={{ color: '#282828' }}>{el.split(".md")[0]}</a></div>
