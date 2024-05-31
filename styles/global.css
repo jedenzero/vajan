@@ -96,7 +96,7 @@ a{
 }
 table{
      border-spacing:0;
-     font-family:"IBM Plex Sans","IBM Plex Sans KR","Noto Sans";
+     font-size:12px;
 }
 td{
      padding:10px;
