@@ -1,6 +1,6 @@
 # vajan
 Vajanči ečenijeze.
-> 바얀 세계관 위키 (구글 독스 연동)
+> 바얀 세계관 위키 (~~구글 독스~~깃허브 연동)
 ## 3/24
 google drive api가 조금만 더 쉬웠어도...
 결국 원래 사용하던 sheets api를 사용했다...
