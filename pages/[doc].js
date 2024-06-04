@@ -96,6 +96,7 @@ useEffect(() => {
     <>
       <head>
         <title>{`${doc} - 바얀`}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
       </head>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문">VAJAN</a></h2>
