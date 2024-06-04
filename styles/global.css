@@ -112,10 +112,10 @@ table{
      font-size:0.8rem;
 }
 th{
-     text-align:left;
-     font-weight:normal;
      padding:10px;
      white-space:nowrap;
+     text-align:left;
+     font-weight:normal;
 }
 td{
      padding:10px;
