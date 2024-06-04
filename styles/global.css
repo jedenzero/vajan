@@ -111,7 +111,7 @@ table{
      border-spacing:0;
      font-size:0.8rem;
 }
-table th{
+thead th{
      padding:10px;
      white-space:nowrap;
      text-align:left;
