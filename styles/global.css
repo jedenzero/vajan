@@ -111,9 +111,11 @@ table{
      border-spacing:0;
      font-size:0.8rem;
 }
-thead th{
+th{
      text-align:left;
      font-weight:normal;
+     padding:10px;
+     white-space:nowrap;
 }
 td{
      padding:10px;
