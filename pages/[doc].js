@@ -108,7 +108,7 @@ useEffect(() => {
           <div key={el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`} style={{ color: '#282828' }}>{el.split(".md")[0]}</a></div>
         ))}
       </div>
-      <div id="category" style={{display:categories.length>0?'block':'none'}}>
+      <div id="category" style={{visibility:categories.length>0?'visible':'hidden'}}>
         {categories.map(el => (
           <span key={'CATEGORY'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0]}</a></span>
         ))}
