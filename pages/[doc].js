@@ -96,7 +96,7 @@ useEffect(() => {
     <>
       <head>
         <title>{`${doc} - 바얀`}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </head>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문">VAJAN</a></h2>
@@ -108,7 +108,7 @@ useEffect(() => {
           <div key={el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`} style={{ color: '#282828' }}>{el.split(".md")[0]}</a></div>
         ))}
       </div>
-      <div id="category">
+      <div id="category" style={{display:categories.length>0?'block':'none'}}>
         {categories.map(el => (
           <span key={'CATEGORY'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0]}</a></span>
         ))}
