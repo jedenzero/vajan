@@ -28,6 +28,7 @@ body{
 }
 #header h2{
      display:inline-block;
+     margin-top:12px;
 }
 #header h2 a{
      color:#424242;
@@ -52,7 +53,7 @@ body{
      width:80dvw;
      height:40px;
      margin:0 auto;
-     margin-top:70px;
+     margin-bottom:20px;
      padding:10px;
      padding-left:20px;
      border-radius:20px;
@@ -99,9 +100,10 @@ img{
      width:200px;
      border-radius:10px;
 }
-h2{
+h1,h2,p{
      font-weight:normal;
-     margin-bottom:20px;
+     margin:0;
+     margin-bottom:10px;
 }
 a{
      text-decoration:none;
