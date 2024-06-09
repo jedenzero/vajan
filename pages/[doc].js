@@ -114,7 +114,7 @@ useEffect(() => {
         ))}
       </div>
       <div id="content">
-        <h2>{doc}</h2>
+        <h1>{doc}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map((el, index) => (
           <p key={index}>
