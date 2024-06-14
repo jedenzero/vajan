@@ -12,8 +12,8 @@
      :root{
           --background-color:#282828;
           --color-weak:#424242;
-          --color-medium:#A0A0A0;
-          --color-strong:#F0F0F0;
+          --color-medium:#F0F0F0;
+          --color-strong:#FAFAFA;
           --link-color:#B4FF00;
      }
 }
@@ -130,7 +130,7 @@ h1,h2,p{
 }
 a{
      text-decoration:none;
-     color:#5064C8;
+     color:var(--link-color);
 }
 table{
      border-spacing:0;
