@@ -105,7 +105,7 @@ useEffect(() => {
       <div id="contain">
       <div id="result" style={{display:resultVisibility?'block':'none'}} onMouseDown={()=>setIsClicked(true)}>
         {searchResult.map(el => (
-          <div key={'RESULT:'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`} style={{ color: '#282828' }}>{el.split(".md")[0]}</a></div>
+          <div key={'RESULT:'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0]}</a></div>
         ))}
       </div>
       <div id="category" style={{display:categories.length>0?'block':'none'}}>
@@ -118,7 +118,7 @@ useEffect(() => {
         <div dangerouslySetInnerHTML={{ __html: content }} />
         {doc==='대문' && docs.length > 0 && docs.map(el => (
           <p key={'LIST:'+el.split('.md')[0]}>
-            <a href={`/${el.split('.md')[0]}`} style={{ color: '#374052' }}>{el.split('.md')[0]}</a>
+            <a href={`/${el.split('.md')[0]}`}>{el.split('.md')[0]}</a>
           </p>
         ))}
       </div>
