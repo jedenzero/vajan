@@ -91,9 +91,11 @@ body{
      margin:0 auto;
      padding:25px;
      background-color:var(--background-color);
-     color:var(--color-medium);
      box-shadow: #8C96A033 0px 2px 20px;
      border-radius:10px;
+}
+#result a{
+     color:var(--color-medium);
 }
 #contain{
      box-sizing:border-box;
