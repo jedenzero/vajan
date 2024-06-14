@@ -110,7 +110,7 @@ useEffect(() => {
       </div>
       <div id="category" style={{display:categories.length>0?'block':'none'}}>
         {categories.map(el => (
-          <span key={'CATEGORY:'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0].split(":")[1]}</a></span>
+          <div key={'CATEGORY:'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split(".md")[0].split(":")[1]}</a></div>
         ))}
       </div>
       <div id="content">
