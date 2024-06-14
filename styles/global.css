@@ -6,13 +6,15 @@
      --color-weak:#F0F0F0;
      --color-medium:#424242;
      --color-strong:#282828;
+     --link-color:#5064C8;
 }
 @media(prefers-color-scheme:dark){
      :root{
           --background-color:#282828;
-          --color-weak:#969696;
-          --color-medium:#C8C8C8;
-          --color-strong:#E0E0E0;
+          --color-weak:#424242;
+          --color-medium:#A0A0A0;
+          --color-strong:#F0F0F0;
+          --link-color:#B4FF00;
      }
 }
 body{
@@ -61,6 +63,7 @@ body{
       font-size:16px;
       font-family:inherit;
       background-color:var(--color-weak);
+      color:var(--color-medium);
 }
 #category{
      box-sizing:border-box;
@@ -88,6 +91,7 @@ body{
      margin:0 auto;
      padding:25px;
      background-color:var(--background-color);
+     color:var(--color-medium);
      box-shadow: #8C96A033 0px 2px 20px;
      border-radius:10px;
 }
