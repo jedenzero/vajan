@@ -45,7 +45,7 @@ useEffect(() => {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
         const data = await response.json();
         if (isActive) {
-          const content=marked.parse(data.content).replace(/\[([^\[\]]+\)]/g,`<a href='$1'>$1</a>`);
+          const content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
           setContent(content);
         }
       } catch (error) {
