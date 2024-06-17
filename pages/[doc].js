@@ -37,23 +37,29 @@ export default function Doc() {
     }
   }
 
-  const fetchContent = async (docName) => {
-    try {
-      const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
-      const data = await response.json();
-      let category = [];
-      let content = marked.parse(data.content).replace(/\[([^\[\]]+)\]/g, `<a href='$1'>$1</a>`)
-        .replace(/\{분류:[^\{\}]+\}/g, (match) => {
-          category.push(match.replace(/\{|\}/g, ''));
-          return '';
-        });
-      setCategories(category);
-      setContent(content);
-    } catch (error) {
-      console.error('Error:', error);
-      setContent('<p>문서를 불러오는 데 실패했습니다.</p>');
+ const fetchContent = async (docName) => {
+  try {
+    const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
+    const data = await response.json();
+    
+    if (!data.content || data.content.trim() === '') {
+      setContent('<p>이 문서는 아직 내용이 없습니다.</p>');
+      return;
     }
-  };
+
+    let category = [];
+    let content = marked.parse(data.content).replace(/\[([^\[\]]+)\]/g, `<a href='$1'>$1</a>`)
+      .replace(/\{분류:[^\{\}]+\}/g, (match) => {
+        category.push(match.replace(/\{|\}/g, ''));
+        return '';
+      });
+    setCategories(category);
+    setContent(content);
+  } catch (error) {
+    console.error('Error:', error);
+    setContent('<p>문서를 불러올 수 없습니다.</p>');
+  }
+};
 
   const fetchDocs = async () => {
     try {
