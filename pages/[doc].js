@@ -39,11 +39,11 @@ export default function Doc() {
 
  const fetchContent = async (docName) => {
   try {
-    const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${encodeURIComponent(docName)}`);
+    const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
     const data = await response.json();
     
     if (!data.content || data.content.trim() === '') {
-      setContent('<p>이 문서는 아직 내용이 없습니다.</p>');
+      setContent('');
       return;
     }
 
@@ -66,6 +66,7 @@ export default function Doc() {
       const response = await fetch('https://vajan.vercel.app/api/getDocs');
       const data = await response.json();
       setDocs(data.fileNames);
+      console.log(docs);
       return data.fileNames;
     } catch (error) {
       console.error('Error:', error);
@@ -77,7 +78,7 @@ export default function Doc() {
     const result = [];
     for (const el of docs) {
       try {
-        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${encodeURIComponent(el)}`);
+        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
         const data = await response.json();
         if (data.content && data.content.includes(`{${doc}}`)) {
           result.push(el);
