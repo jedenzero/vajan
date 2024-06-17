@@ -83,7 +83,7 @@ useEffect(() => {
     try {
       const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
       const data = await response.json();
-      if (isActive&&data.content.includes(`{${doc}}`)){
+      if (isActive&&data.content&&data.content.includes(`{${doc}}`)){
         result.push(el);
       }
     }catch(error){
