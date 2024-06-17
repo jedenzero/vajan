@@ -39,7 +39,7 @@ export default function Doc() {
 
  const fetchContent = async (docName) => {
   try {
-    const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
+    const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${encodeURIComponent(docName)}`);
     const data = await response.json();
     
     if (!data.content || data.content.trim() === '') {
@@ -77,7 +77,7 @@ export default function Doc() {
     const result = [];
     for (const el of docs) {
       try {
-        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
+        const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${encodeURIComponent(el)}`);
         const data = await response.json();
         if (data.content && data.content.includes(`{${doc}}`)) {
           result.push(el);
