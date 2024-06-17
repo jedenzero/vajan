@@ -66,7 +66,7 @@ export default function Doc() {
       const response = await fetch('https://vajan.vercel.app/api/getDocs');
       const data = await response.json();
       setDocs(data.fileNames);
-      console.log(docs);
+      console.log(data.fileNames);
       return data.fileNames;
     } catch (error) {
       console.error('Error:', error);
