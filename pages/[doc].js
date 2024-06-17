@@ -9,6 +9,7 @@ export default function Doc() {
   const [content, setContent] = useState('');
   const [docs, setDocs] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [categories_elements, setCategories_elements] = useState([]);
   const [searchResult, setSearchResult] = useState([]);
   const [resultVisibility, setResultVisibility] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
@@ -45,7 +46,10 @@ useEffect(() => {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
         const data = await response.json();
         if (isActive) {
+          const category=[];
           const content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
+          content.replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{분류:|\}/g,''));return '';});
+          setCategories(category);
           setContent(content);
         }
       } catch (error) {
@@ -61,7 +65,9 @@ useEffect(() => {
         const data = await response.json();
         if (isActive) {
           setDocs(data.fileNames);
-          fetchCategories(data.fileNames);
+          if(doc.startsWith('분류:')){
+            fetchCategories(data.fileNames);
+          }
         }
       } catch (error) {
         console.error('Error:', error);
@@ -71,21 +77,20 @@ useEffect(() => {
   fetchDocs();
   
   const fetchCategories = async (docs) => {
-  const i = docs.filter(el=>el.startsWith('분류:'));
   var result=[];
   
-  for(const el of i){
+  for(const el of docs){
     try {
       const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${el}`);
       const data = await response.json();
-      if (isActive&&data.content.includes(`[${doc}]`)){
+      if (isActive&&data.content.includes(`{${doc}}`)){
         result.push(el);
       }
     }catch(error){
       console.error('Error:', error);
     }
     };
-    setCategories(result);
+    setCategories_elements(result);
   };
   
   return () => {
@@ -117,6 +122,9 @@ useEffect(() => {
       <div id="content">
         <h1>{doc}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
+        {categories_elements.map(el => (
+          <li key={'CATEGORY_ELEMENT:'+el.split('.md')[0]}>{el.split('.md')[0]}</li>
+        ))}
         {doc==='대문' && docs.length > 0 && docs.map(el => (
           <p key={'LIST:'+el.split('.md')[0]}>
             <a href={`/${el.split('.md')[0]}`}>{el.split('.md')[0]}</a>
