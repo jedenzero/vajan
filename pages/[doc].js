@@ -48,7 +48,7 @@ useEffect(() => {
         if (isActive) {
           let category=[];
           let content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
-          content.replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{분류:|\}/g,''));return '';});
+          content.replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{|\}/g,''));return '';});
           setCategories(category);
           setContent(content);
         }
@@ -100,10 +100,10 @@ useEffect(() => {
 
   return (
     <>
-      <head>
+      <Head>
         <title>{`${doc} - 바얀`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      </head>
+      </Head>
       <div id="header">
         <h2><a href="https://vajan.vercel.app/대문">VAJAN</a></h2>
         <input type="text" id="input" onChange={search} onBlur={off}/>
