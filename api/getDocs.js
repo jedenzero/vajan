@@ -1,6 +1,8 @@
 const https = require('https');
 
 module.exports = async (req, res) => {
+  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+
   const options = {
     hostname: 'api.github.com',
     port: 443,
@@ -13,25 +15,28 @@ module.exports = async (req, res) => {
   };
 
   let data = '';
-
   const request = https.request(options, (response) => {
     response.on('data', (chunk) => {
       data += chunk;
     });
 
     response.on('end', () => {
+      if (response.statusCode !== 200) {
+        return res.status(response.statusCode).json({ error: `GitHub API 오류: ${response.statusCode}` });
+      }
+
       try {
         const parsedData = JSON.parse(data);
-        const fileNames = parsedData.map(file => file.name);
+        const fileNames = parsedData.map(file => decodeURIComponent(file.name));
         res.json({ fileNames });
       } catch (error) {
-        res.status(500).json({ error: '파싱 에러' });
+        res.status(500).json({ error: '파싱 에러', details: error.message });
       }
     });
   });
 
   request.on('error', (error) => {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: '서버 오류', details: error.message });
   });
 
   request.end();
