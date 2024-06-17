@@ -47,8 +47,8 @@ useEffect(() => {
         const data = await response.json();
         if (isActive) {
           let category=[];
-          let content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
-          content.replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{|\}/g,''));return '';});
+          let content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`)
+            .replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{|\}/g,''));return '';});
           setCategories(category);
           setContent(content);
         }
@@ -122,14 +122,11 @@ useEffect(() => {
       <div id="content">
         <h1>{doc}</h1>
         <div dangerouslySetInnerHTML={{ __html: content }} />
+        <ul>
         {categories_elements.map(el => (
-          <li key={'CATEGORY_ELEMENT:'+el.split('.md')[0]}>{el.split('.md')[0]}</li>
+          <li key={'CATEGORY_ELEMENT:'+el.split('.md')[0]}><a href={`/${el.split(".md")[0]}`}>{el.split('.md')[0]}</a></li>
         ))}
-        {doc==='대문' && docs.length > 0 && docs.map(el => (
-          <p key={'LIST:'+el.split('.md')[0]}>
-            <a href={`/${el.split('.md')[0]}`}>{el.split('.md')[0]}</a>
-          </p>
-        ))}
+        </ul>
       </div>
       </div>
     </>
