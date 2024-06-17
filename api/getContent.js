@@ -4,6 +4,7 @@ module.exports = async (req, res) => {
   const { filePath } = req.query;
 
   if (!filePath) {
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
     return res.status(400).json({ error: '파일 경로' });
   }
 
@@ -27,6 +28,8 @@ module.exports = async (req, res) => {
 
     response.on('end', () => {
       try {
+        res.setHeader('Content-Type', 'application/json; charset=utf-8');
+        
         const parsedData = JSON.parse(data);
         const content = Buffer.from(parsedData.content, 'base64').toString('utf8');
         res.json({ content });
