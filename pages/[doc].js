@@ -46,8 +46,8 @@ useEffect(() => {
         const response = await fetch(`https://vajan.vercel.app/api/getContent?filePath=documents/${docName}`);
         const data = await response.json();
         if (isActive) {
-          const category=[];
-          const content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
+          let category=[];
+          let content=marked.parse(data.content).replace(/\[([^\[\]]+)\]/g,`<a href='$1'>$1</a>`);
           content.replace(/\{분류:[^\{\}]+\}/g,(match)=>{category.push(match.replace(/\{분류:|\}/g,''));return '';});
           setCategories(category);
           setContent(content);
