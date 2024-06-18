@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
 
   if (!filePath) {
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    return res.status(400).json({ error: '파일 경로를 입력하세요.' });
+    return res.status(400).json({ error: '파일 경로' });
   }
 
   const options = {
@@ -31,13 +31,8 @@ module.exports = async (req, res) => {
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
         
         const parsedData = JSON.parse(data);
-        
-        if (parsedData.name) {
-          const title = parsedData.name;
-          res.json({ title });
-        } else {
-          res.status(500).json({ error: '파일 제목을 읽을 수 없습니다.' });
-        }
+        const content = Buffer.from(parsedData.content, 'base64').toString('utf8');
+        res.json({ content });
       } catch (error) {
         res.status(500).json({ error: '파싱 에러' });
       }
