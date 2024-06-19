@@ -14,10 +14,12 @@ module.exports = async (req, res) => {
     }
   };
 
-  let data = '';
+  let data = [];
   const request = https.request(options, (response) => {
+    response.setEncoding('utf8');
+    
     response.on('data', (chunk) => {
-      data += chunk;
+      data.push(Buffer.from(chunk, 'utf8'));
     });
 
     response.on('end', () => {
@@ -26,7 +28,8 @@ module.exports = async (req, res) => {
       }
 
       try {
-        const parsedData = JSON.parse(data);
+        const fullData = Buffer.concat(data).toString('utf8');
+        const parsedData = JSON.parse(fullData);
         const fileNames = parsedData.map(file => decodeURIComponent(file.name));
         res.json({ fileNames });
       } catch (error) {
